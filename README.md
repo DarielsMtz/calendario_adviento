@@ -2,7 +2,7 @@
 
 Este proyecto es un calºendario de Advent 2024 hecho con Astro.
 
-![Screenshot](src/assets/mockup.webp)
+![Screenshot](https://github.com/DarielsMtz/calendario_adviento/blob/master/public/mockup.webp)
 
 ## 🚀 Tecnologías
 
