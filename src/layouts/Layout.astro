@@ -35,8 +35,12 @@ const { title } = Astro.props;
   html,
   body {
     background-color: var(--color-bg);
-    height: 100svh;
+    height: 100%;
+    width: 100%;
     font-family: "Abril Fatface", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
   }
 
   button {
@@ -47,18 +51,19 @@ const { title } = Astro.props;
   }
   h1 {
     text-align: center;
-    font-size: 4rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
     margin-bottom: 0px;
     padding: 0;
   }
 
   .grid {
     display: grid;
-    height: 100vh;
+    /* height: 100vh; */
     grid-template-columns: repeat(5, 100px [col-start]);
     grid-template-rows: repeat(12, 100px [row-start]);
     justify-content: center;
     align-content: center;
+    padding: 70px 0;
   }
 
   @media (min-width: 1000px) {
