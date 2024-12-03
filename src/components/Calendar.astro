@@ -1,0 +1,46 @@
+---
+import Button from "../components/Button.astro";
+
+// Data para la grid
+const buttons = [
+  { number: 1, classes: "grid__item--sun grid__item--lg grid__item--1" },
+  { number: 2, classes: "grid__item--2" },
+  { number: 3, classes: "grid__item--lg grid__item--3" },
+  { number: 4, classes: "grid__item--moss grid__item--lg grid__item--4" },
+  { number: 5, classes: "grid__item--5" },
+  { number: 6, classes: "grid__item--rose grid__item--lg grid__item--6" },
+  { number: 7, classes: "grid__item--7" },
+  { number: 8, classes: "grid__item--8" },
+  { number: 9, classes: "grid__item--9" },
+  { number: 10, classes: "grid__item--10" },
+  { number: 11, classes: "grid__item--sky grid__item--11" },
+  { number: 12, classes: "grid__item--12" },
+  { number: 13, classes: "grid__item--moss grid__item--lg grid__item--13" },
+  { number: 14, classes: "grid__item--14" },
+  { number: 15, classes: "grid__item--rose grid__item--15" },
+  { number: 16, classes: "grid__item--16" },
+  { number: 17, classes: "grid__item--17" },
+  { number: 18, classes: "grid__item--sky grid__item--lg grid__item--18" },
+  { number: 19, classes: "grid__item--rose grid__item--19" },
+  { number: 20, classes: "grid__item--20" },
+  { number: 21, classes: "grid__item--sun grid__item--lg grid__item--21" },
+  { number: 22, classes: "grid__item--sun grid__item--22" },
+  { number: 23, classes: "grid__item--23" },
+  { number: 24, classes: "grid__item--sky grid__item--lg grid__item--24" },
+];
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<h1>{title}</h1>
+<div class="grid">
+  {
+    buttons.map((button) => (
+      <Button number={button.number} classes={button.classes} />
+    ))
+  }
+</div>

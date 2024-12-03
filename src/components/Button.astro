@@ -1,0 +1,13 @@
+---
+interface ButtonProps {
+  number: number;
+  classes: string;
+}
+
+const { number, classes } = Astro.props;
+---
+
+<button class={`grid__item ${classes}`}>
+  <span class="grid__item-door">{number}</span>
+  <span class="grid__item-shadow"></span>
+</button>
